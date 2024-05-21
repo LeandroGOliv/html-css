@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando Links externos</h1>
+    <p>Voce pode acessar o meu <a href="https://steamcommunity.com/id/LoO13/" target="_blank" rel="external">perfil da Steam.</a></p> <!-- targe="_blank" serve para abrir o site em outra guia e rel para indicar se é externo ou de outro tipo (mais exemplos de rel no pdf)-->
+    <p>Voce tambem pode acessar o meu <a href="https://www.youtube.com/channel/UC8RGzU7tNxCB68T2YCBmnxQ" target="_blank" rel="external">canal do youtube.</a></p>
+    <h2>Usando Links internos</h2>
+    <p>Esta é a primeira página do site. Se voce quiser pode acessar também a minha <a href="pag002.html" rel="next">segunda página</a> </p> <!--rel="next" para links para a PROXIMA página-->
+    <p>Voce também pode acessar a nossa <a href="noticias/pag003.html" rel="next">página de notícias.</a></p>
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="contrato/contrato_online.pdf" download="contrato.pdf" type="application/pdf">Baixar o contrato em PDF</a></li> <!--Iana.org tem a lista de types pra cada tipo de arquivo-->
+        <li><a href="contrato/contrato_online.zip" download="contrato.zip" type="application/zip">Baixar o contrato em ZIP</a></li>
+    </ul>
+</body>
+</html>

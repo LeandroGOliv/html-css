@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <!--Assim como nos audios ou videos tambem possuem varios formatos (mp4, m4v, ogv, webm)--> <!--Usar handbrake para converter videos-->
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeos esta hospedado no meu própio servidor.</p>
+    <video controls width="700" poster="imagens/thumb.png" loop autoplay>
+        <source src="midias/Video-Lago.webm" type="video/webm">
+        <source src="midias/Video-Lago.mp4" type="video/mp4">
+        <source src="midias/video-lago.m4v" type="video/mp4">
+        <!--Faltou o .OGV pq n baixei...-->
+        <p>Seu navegador não é compatível com reprodução de vídeos.</p>
+    </video>
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-5wvWEUGQX8?si=9CA618cJUnReus7S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!--Só ir no vídeo do YTB que quer, clicar em compartilhar, depois incorporar e copiar o código de la e jogar aqui-->
+    <!--Melhor usar do YTB do que hospedar os vídeos no própio servidor, pois gera menos custo, usa menos o servidor-->
+    <!--Se for usar um vídeo privado, dar preferencia para o VIMEO, usar o não listado do youtube facilita muito a pirataria-->
+</body>
+</html>

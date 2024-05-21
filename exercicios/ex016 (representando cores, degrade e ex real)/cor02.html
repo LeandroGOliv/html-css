@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title> <!-- o * {} serve para fazer um seletor global na css-->
+    <style>
+        * { /* Configurações globais das CSS */
+            height: 100%;
+        }
+        body{
+            background-image: linear-gradient(to bottom, #5E55A4, #86489B, #B03D88, #D95759, #F0802A, #F9C967);  /* Para o degrade não se usa background color e sim image (linear, radial...), no paranteses se coloca a direção do degrade(em graus ou escrevendo) e as cores(depois das cores da pra botar porcentagens, indicando o quanto cada cor vai ocupar no degrade), se ficar "zebrado" é porque tem que configurar a altura*/
+            background-attachment: fixed;
+        } 
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+</body>
+</html>

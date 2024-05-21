@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            /*width: 800px; faz com que o conteudo não "escape" do main pra fora quando diminui a tela, porem só até 800px se diminuir mais dai ja fica errado, por isso usar min e max width*/
+            min-width: 280px; /*largura dos celulares mais antigos, contando com padding*/
+            max-width: 800px;
+            margin: auto; /*ja faz com que o conteudo fique centralizado*/
+        }
+
+        img{
+            width: 100%; /* faz com que nao "escape" do main*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quod odio sit ratione, consectetur eius beatae inventore vel aut nisi nam debitis asperiores laboriosam labore maiores, perferendis explicabo atque minus?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum exercitationem nam cum, beatae debitis eaque dignissimos numquam nihil veniam repellat aliquam ratione corporis quia. Molestiae pariatur aspernatur libero tenetur at?Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, nisi excepturi id fugiat mollitia autem amet iste at sed architecto quaerat. Reprehenderit harum incidunt necessitatibus quod consectetur enim, non officiis.</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg"> <!-- quando chegar em 600px ele vai usar a imagem menor -->
+            <img src="imagens/irina-blok.jpg" alt="">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quod odio sit ratione, consectetur eius beatae inventore vel aut nisi nam debitis asperiores laboriosam labore maiores, perferendis explicabo atque minus?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum exercitationem nam cum, beatae debitis eaque dignissimos numquam nihil veniam repellat aliquam ratione corporis quia. Molestiae pariatur aspernatur libero tenetur at?Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, nisi excepturi id fugiat mollitia autem amet iste at sed architecto quaerat. Reprehenderit harum incidunt necessitatibus quod consectetur enim, non officiis.</p>
+    </main>
+</body>
+</html>

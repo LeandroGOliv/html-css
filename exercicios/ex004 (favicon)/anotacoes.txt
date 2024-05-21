@@ -1,0 +1,3 @@
+site pra achar icons - iconarchive
+melhor usar arquivo .ico
+usar favicon.io pra criar ou mudar de png pra ico

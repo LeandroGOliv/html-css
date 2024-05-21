@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinamica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <!--a ordem do código importa-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!--se o navegador tiver menos de 1000px (tamanho da maior imagem que quero botar) ele vai carregar a foto m...--> <!--botar uns 50px a mais-->
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+   
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <!-- <audio src="midias/previa-davi.mpeg" controls></audio> - MANEIRA 1
+    MP3 WAV OGG (formatos de áudio) se um não funcionar no navegador, tentar outros-->
+    <audio preload="metadata" controls loop> <!--MANEIRA 2--> <!--preload = auto ou vazio ele vai carregar o site apenas depois de carregar/baixar o audio todo, então vai demorar muito, metadata vai carregar poucas informações do audio e none não carrega nada do audio, apenas quando apertar play-->
+        <source src="midias/previa-davi.mpeg" type="audio/mpeg"> <!-- cada formato de áudio nesse caso mp3, tem um type diferente (types para outros formatos só olhar no material em pdf do curso)-->
+        <source src="midias/previa-davi.ogg" type="audio/ogg">
+        <source src="midias/previa-davi.wav" type="audio/wav"> <!--daria pra ter todos formatos para ser compativel com o maximo de navegadores possiveis... E a ordem dos arquivos importa, ele vai primeiro tentar carregar o mp3 nesse caso, dps o ogg...--> <!--Tentar não usar wav porque é muito pesado-->
+        <p>Infelizmente seu navegador não consegue reproduzir audio. <a href="midias/previa-davi.mpeg">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+   
+</body>
+</html>
