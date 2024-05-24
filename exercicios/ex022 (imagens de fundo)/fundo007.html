@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container{
+            background-image: url(images/target001.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative; /*por padrao ele ja é relativo*/
+            height: 500px;
+            background-color: purple;
+            padding: 10px;
+        }
+        #conteudo{
+            background-image: url(images/target001.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            /*O margin:auto só alinharia horizontalmente, por isso se usa essa outra solução*/
+
+            /*as propiedades de baixo só funcionam se botar o absolute la*/
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>

@@ -6,16 +6,25 @@
     <title>Teste de imagem de fundo</title>
     <style>
         body{
-            height: 100vh;
-            background-color: black; /*mesmo que usar uma imagem no fundo, configurar uma cor, pois a imagem demora um pouco pra carregar, dai caso o usuario queira ele pode ir usando o site enquanto carrega*/
+            /*height: 100vh;
+            background-color: black; //"mesmo que usar uma imagem no fundo, configurar uma cor, pois a imagem demora um pouco pra carregar, dai caso o usuario queira ele pode ir usando o site enquanto carrega"//
             background-image: url(images/wallpaper002.jpg);
             background-position: center center;
             background-repeat: no-repeat;
+            background-size: cover; //"contain, cover ou por numero(px ou %), foi usado o cover pois ele serve pra cobrir o fundo todo"//
+            background-attachment: fixed; //scroll;	-> padrão; o fundo rola junto com o conteúdo
+				                             fixed;	-> fundo fixo à tela, a medida que o conteúdo rola*/
+
+            /*Shorthand background
+                color > image > repeat > attachment > position
+                o size vai separado
+            */
+            background: black url(images/wallpaper002.jpg) no-repeat fixed center center; 
             background-size: cover;
         }
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px; /* a maxima largura que ele vai é 400, se precisar ele diminui, mas nunca passa disso*/
             padding: 10px;
             margin: auto;
             border: 1px solid black;
