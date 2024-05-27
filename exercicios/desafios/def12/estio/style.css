@@ -50,6 +50,9 @@ section{
     font-family: var(--fonte03);
     font-size: 3vw;
 }
+section > p{
+    padding-bottom: 1.7em;
+}
 section.normal{
     background-color: white;
     color: black;
@@ -57,11 +60,23 @@ section.normal{
 section.paralax{
     background-color: rgb(39, 39, 39);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.329); /*(inset pq é uma sombra interna) para dar o efeito que parece dividir a folha e a imagem*/
+    background-size: cover;
+    background-attachment: fixed; /*para fazer o paralax*/
 }
 section.paralax > p{
-    display: inline-block /*https://dev.to/wps13/tipos-de-display-no-css-471n*/
+    display: inline-block; /*https://dev.to/wps13/tipos-de-display-no-css-471n*/
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.171);
+    background-color: rgba(0, 0, 0, 0.377);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.507);
+}
+section#img01{
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center; /*porque o conteudo imagem que quero que apareca esta a direita*/
+}
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
 }
 footer{
     background-color: black;
