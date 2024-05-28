@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse; /*tem que ser em table... n da pra botar em td, th...*/
+            position: relative; /*precisa pra fixar o cabeçalho*/
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bolder;
+            padding: 10px;
+            background-color: lightcyan;
+            border: 1px solid black;
+            border-radius: 3px 5px 0px 0px;
+        }
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+        thead > tr > th{ /*essa configuração vai servir pra deixar o cabeçalho fixo quando rodar a tabela para baixo, serve para casos que tem muitas linhas... (Antes de usar testar pois alguns navegador não aceitam mt bem)*/
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+        tbody tr:nth-child(odd){ /*2n é para falar que é para fazer de 2 em 2 linhas, da pra configurar po par(even) e impar tambem(odd)*//*serve para fazer o efeito zebrado, fica mais facil de ler a linha inteira, e não fica confuso, ex: quando vai ler o resultado de um concurso e ter que ficar passando o dedo pra ver a linha certinha, usar quando tiver muitos dados lateralmente(muitas colunas) ou quando a letra for mt pequena*/
+            background-color: lightgray;
+        }
+        tbody tr:nth-child(even){
+            background-color: rgba(250, 250, 210, 0.486);
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 7px;
+        }
+        td.num{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION (tipo legenda/titulo)
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!--scope serve pra dizer que ESTADO é o titulo daquela coluna, que os dados dela viram abaixo na coluna-->
+                <th scope="col" style="width: 70px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Geras</td>
+                <td class="num">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 444 380	</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">10 882 965</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 058 931</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8 794 957</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 121 025</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7 610 361</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 056 495</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6 775 805</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">3 974 687</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3 941 613</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3 833 712</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 658 649</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 302 729</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 271 199</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3 127 683</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2 817 381</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 757 013</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2 209 558</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1 581 196</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1 511 460</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">830 018	</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">733 759</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">636 707</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td scope="row">Total de Habitantes</td> <!--SCOPE = ROW pq é o "titulo" da linha e não da coluna-->
+                <td class="num"><strong>210.144.125</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
