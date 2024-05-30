@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de Iframe</title>
+    <style>
+       iframe{
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+       }
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de Iframe</h1>
+    <p>
+        <!-- Tamanho padrão 300x150px -->
+        Acessando o site do 
+        <iframe src="https://www.cursoemvideo.com/" frameborder="0" scrolling= "auto"> <!--scrolling = auto, yes, no-->
+            <a href="https://www.cursoemvideo.com/" target="_blank">Curso em Vídeo</a> <!--Essa mensagem só aparece em navegadores não compativeis com iframe-->
+        </iframe>
+         para apreder a programar.
+    </p>
+    <p>
+        O site do 
+        <iframe src="https://www.google.com.br" frameborder="0">
+            <a href="https://www.google.com.br" target="_blank">Google</a>
+        </iframe>
+         também é muito legal, pena que não funciona no iframe. <!-- Alguns sites tem uma proteção contra iframes, dai eles não exibem-->
+    </p>
+</body>
+</html>
