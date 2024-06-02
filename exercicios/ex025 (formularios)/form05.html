@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.py" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="idsxmas" value="M"><!--Quando usar input assim tem que usar o mesmo NAME para poder marcar e desmarcar as bolinhas, se não, não funciona. (NÃO SERVE PARA CHECKBOX)-->
+            <label for="idsxmas">Masculino</label>
+            <input type="radio" name="sexo" id="idsxfem" value="F">
+            <label for="idsxfem">Feminino</label> 
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esfut" id="idesfut">
+            <label for="idesfut">Futebol</label> <br>
+            <input type="checkbox" name="esnat" id="idesnat">
+            <label for="idesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="idesten">
+            <label for="idesten">Tenis</label> <br>
+            <input type="checkbox" name="esbas" id="idesbas">
+            <label for="idesbas">Basquete</label> <br>
+            <!--Se quiser que algum ja venha marcado por padrão só colocar o atributo CHECKED no input-->
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

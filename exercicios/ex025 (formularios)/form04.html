@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.py" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend> <!--FIELDSET para criar um grupamento e LEGEND se quiser dar um nome/legenda para o grupamento-->
+            <p>
+                <label for="idnome">Nome:</label>
+                <input type="text" name="nome" id="idnome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="idemail">E-mail:</label>
+                <input type="email" name="email" id="idemail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="idtel">Telefone:</label>
+                <input type="tel" name="tel" id="idtel" pattern="^[0-9]{4,5}-[0-9]{4}$" autocomplete="tel" placeholder="xxxx-xxxx" required>
+            </p>
+        </fieldset>
+        <!-- Estudar mais sobre RegEX --> <!-- PATTERN para criar um padrão de como deve ser preenchido o campo-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
