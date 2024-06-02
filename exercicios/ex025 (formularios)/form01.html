@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.py" method="" autocomplete="off"> <!--Action é pra onde eu vou enviar--> <!--get e post são metodos de envio, quando usar: GET(quando não forem dados sensiveis, quando quiser a url compartilhavel. OBS: o get tem um limite de dados, ele envia no maximo 3k bytes(+-3k letras), e quando precisar enviar fotos/arquivos não funciona o get). POST(Qualquer outro caso).-->
+        <p><label for="idnome">Nome:</label> <!--Label é uma "etiqueta", aqui sendo usado para mostrar que a caixa tem uma ligação com a palvra "nome"-->
+            <input type="text" name="nome" id="idnome"></p> <!--NAME mais usado em php,html... ID mais usado em javascript,label...-->
+        <p><label for="idsobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="idsobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
