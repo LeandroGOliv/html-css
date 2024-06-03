@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.py" method="get" autocomplete="on">
+        <p>
+            <label for="idano">Em que ano voce nasceu?</label>
+            <input type="number" name="ano" id="idano" min="1930" max="2024" value="0" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="ididade">Sua idade é:</label>
+            <output id="ididade">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        function calcIdade() { //Funcao criada para pegar o ano atual e calcular a idade// 
+            let atual = new Date().getFullYear() //varíavel criada para puxar o ano atual//
+            ididade.innerHTML = Number(atual) - Number(idano.value) //calcula da idade//
+        }
+    </script>
+</body>
+</html>
